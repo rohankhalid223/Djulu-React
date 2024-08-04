@@ -1,0 +1,179 @@
+@import '../../styles/variables';
+
+.whatisSection {
+  position: relative;
+  background-color: #F9F9F5;
+  .mobImage {
+    display: none;
+    @media #{$vpmobile} {
+      margin-bottom: 30px;
+      display: block;
+    }
+  }
+  .containerWrapper {
+    margin: 0 30px;
+    .innerSection {
+      max-width: 1720px;
+      margin: 0 auto;
+      display: flex;
+    //   align-items: center;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @media #{$vptabletP} {
+        flex-direction: column;
+      }
+      .videoSection {
+        border-radius: 10px;
+        overflow: hidden;
+        flex: 0 0 55.5%;
+        max-width: 55.5%;
+        @media #{$vptabletP} {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+        @media #{$vpmobile} {
+          display: none;
+        }
+      }
+      .innerContent {
+        flex: 0 0 38.73%;
+        max-width: 38.73%;
+        @media #{$vptabletP} {
+          flex: 0 0 100%;
+          max-width: 100%;
+          margin-top: 30px;
+        }
+        @media #{$vpmobile} {
+            margin-top: 0px;
+          }
+        .innerBox {
+          text-align: left;
+          svg {
+            margin-bottom: 30px;
+          }
+          h4{
+            color: rgba(255, 199, 39, 1);
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 35px;
+            letter-spacing: 0.01em;
+            margin-bottom: 20px;
+            
+          }
+          h2{
+            padding-bottom: 20px;
+            color: #333;
+            font-size: 45px;
+            font-weight: 600;
+            line-height: 60px; /* 133.333% */
+            letter-spacing: 0.45px;
+            margin-bottom: 0;
+            @media #{$vptabletL} {
+                font-size: 37px;
+                line-height: 45px; /* 133.333% */
+            }
+            @media #{$vpmobile} {
+                font-size: 30px;
+                line-height: 40px; /* 133.333% */
+            }
+          }
+        //   h3 {
+        //     font-size: 45px;
+        //     font-weight: 600;
+        //     line-height: 60px;
+        //     letter-spacing: 0.01em;
+        //     color: #333333;
+        //     margin-bottom: 40px;
+        //     @media #{$vpmobile} {
+        //       margin-bottom: 30px;
+        //     }
+        //   }
+          p {
+            color: #333;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-top: 20px;
+          }
+        }
+      }
+      .containerInner {
+        flex: 0 0 100%;
+        max-width: 100%;
+        .bottomSection {
+          margin-left: auto;
+          max-width: 1357px;
+          width: 100%;
+          background-color: #208075;
+          padding: 50px 60px;
+          margin-top: -100px;
+          border-radius: 10px;
+          @media #{$vpdesktopLGMD} {
+            margin-top: 20px;
+          }
+          @media #{$vpmobile} {
+            padding: 30px;
+            margin-top: 30px;
+          }
+          &.sty2{
+            margin-top: 20px !important;
+            margin: auto;
+            background-color: rgba(255, 199, 39, 1);
+            @media #{$vpmobile} {
+                margin-top: 30px !important;
+            }
+            p{
+                color: rgba(51, 51, 51, 1);
+            }
+          }
+          &.sty3{
+            margin-top: 20px !important;
+            margin-right: auto;
+            margin-left: 0;
+            background-color: #208075;
+            @media #{$vpmobile} {
+                margin-top: 30px !important;
+            }
+          }
+        //   @media #{$vpdesktopLG} {
+        //     margin-top: -24px;
+        //     padding: 50px;
+        //   }
+        //   @media #{$vptabletL} {
+        //     margin-top: 30px;
+        //     padding: 40px;
+        //   }
+        //   @media #{$vpmobile} {
+        //     padding: 30px;
+        //   }
+          p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #fff;
+          }
+        }
+      }
+      .disclaimer{
+        margin-top: 70px !important;
+        max-width: 1236px;
+        margin: auto;
+        padding: 0 20px;
+        @media #{$vpmobile} {
+            padding: 0 ;
+            margin-top: 30px !important;
+        }
+        p{
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 500;
+            line-height: 40px;
+            text-align: center;
+            margin: 0;
+        }
+      }
+    }
+  }
+}

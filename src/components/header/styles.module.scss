@@ -1,0 +1,152 @@
+@import '../../styles/variables';
+
+.prelaunchHeader {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  .headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 60px;
+    transition: ease-in-out 0.5s all;
+    @media #{$vptabletP} {
+      padding: 40px 30px;
+    }
+    @media #{$vpmobile} {
+      padding: 30px ;
+      justify-content: space-between;
+    }
+    &.scrolled{
+      background-color: #041730;
+      padding: 20px 60px;
+      @media #{$vptabletP} {
+        padding: 20px 30px;
+      }
+      @media #{$vpmobile} {
+        padding: 30px 30px;
+      }
+    }
+    .logo{
+      @media #{$vpmobile} {
+       max-width: 187px;
+       a{
+        width: 100%;
+        display: block;
+        svg{
+          width: 100%;
+        }
+      }
+      }
+    }
+  
+    
+    /* Style for the custom dropdown container */
+    /* Style for the custom dropdown button */
+    /* Style for the custom dropdown content */
+    /* Style for the custom dropdown options */
+    /* Style for the custom dropdown options on hover */
+    /* Show the custom dropdown content when the button is clicked */
+   
+    
+
+    .socialWrapper {
+      display: flex;
+      @media #{$vpmobile} {
+        display: none;
+      }
+      .iconWrap {
+        margin-right: 20px;
+        &:last-child {
+          margin-right: 0px;
+        }
+        a{
+          cursor: pointer;
+          svg{
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.customDropdown {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 18%;
+  max-width: 18%;
+  display: flex;
+  justify-content: flex-end;
+  @media #{$vpmobile} {
+    flex: 0 0 103px;
+    max-width: 103px;
+  
+  }
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #FFC727;
+    border-radius: 40px;
+    background-color: $background-color_1;
+    cursor: pointer;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $primaryFont;
+    line-height: 16px;
+    text-transform: uppercase;
+    max-width: 123px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    outline: none;
+    @media #{$vpmobile} {
+      height: 40px;
+    }
+    span{
+      min-width: 33px;
+      margin-left: 10px;
+    }
+  }
+  .customDropdownContent {
+    border-radius: 10px ;
+    text-align: center;
+    right: 0;
+    top: 77px;
+    display: none;
+    position: absolute;
+    background-color: $background-color_2;
+    min-width: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #ddd;
+    @media #{$vpmobile} {
+      top: 57px;
+    }
+    a {
+      color: #333;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px; /* 187.5% */
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+      &.selected{
+        color: #fff;
+        background: #041730;
+      }
+    }
+    &.active {
+      display: block;
+      opacity: 1;
+      
+    }
+  }
+}
